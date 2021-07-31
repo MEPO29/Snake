@@ -13,7 +13,7 @@ public class Jugador extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int r, g, b, jugador;
-    int speed = 3;
+    int speed = 2;
     int count = 0;
     public Jugador(int jugador, int r, int g, int b)
     {
@@ -24,7 +24,6 @@ public class Jugador extends Actor
         this.jugador = jugador;
         getImage().setColor(new Color(r,g,b));
         getImage().fillRect(0,0,40,40);
-        
     }
     
     public void act()

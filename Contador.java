@@ -20,9 +20,17 @@ public class Contador extends Actor
     public void act()
     {
         setImage(new GreenfootImage("Puntos: " + puntos, 26, Color.BLACK, Color.WHITE));
+        ganaste();
     }
     public void sumarPuntos()
     {
         puntos++;
+    }
+    public void ganaste()
+    {
+        if(puntos == 10){
+            getWorld().addObject(new ganaste(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+            Greenfoot.stop();
+        }
     }
 }

@@ -29,12 +29,13 @@ public class Cola extends Actor
         countLength++;
         if(countLength>15 && isTouching(Jugador.class)){
             getWorld().addObject(new Perdiste(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+            Greenfoot.stop();
         }
         if(jugador == 0 && countLength % azulLength == 0){
             getWorld().removeObject(this);
             azulLength++;
           }
-        if(jugador == 4 && countLength % azulLength == 0){
+        if(jugador == 4 && countLength % verdeLength == 0){
             getWorld().removeObject(this);
             verdeLength++;
         }
